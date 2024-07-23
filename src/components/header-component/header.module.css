@@ -1,0 +1,122 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.incident {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.imgSec {
+  width: 44px;
+  height: 44px;
+  background: #fff;
+  text-align: center;
+  border-radius: 100%;
+}
+
+.imgSec img {
+  padding: 15px 0;
+}
+
+.incident h3 {
+  font-size: 40px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.rightContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.nonBio {
+  width: 185px;
+  height: 44px;
+  background: #fff;
+  border-radius: 30px;
+  position: relative;
+  cursor: pointer;
+  border: 0;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.nonBio h3 {
+  background: #1b2535;
+  width: 38px;
+  height: 38px;
+  color: #fff;
+  border-radius: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -15px;
+  bottom: 0;
+  left: 5px;
+  right: 0;
+}
+
+.nonBio h5 {
+  position: absolute;
+  top: -11px;
+  right: 10px;
+  bottom: 0;
+  color: #1b2535;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.nonBio img {
+  position: absolute;
+  top: 18px;
+  bottom: 0;
+  right: 15px;
+  z-index: 999;
+  filter: invert(1);
+}
+
+.nonBio option {
+  font-size: 15px;
+  font-weight: 500;
+  position: absolute;
+  top: -5px;
+  left: 15px;
+  bottom: 0;
+}
+
+.icons {
+  width: 44px;
+  height: 44px;
+  background: #fff;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.user {
+  width: 44px;
+  height: 44px;
+  background: #1b2535;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+select {
+  padding: 0 10px;
+}

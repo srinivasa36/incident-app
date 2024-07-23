@@ -1,0 +1,9 @@
+.heroSec {
+  max-width: calc(100% - 260px);
+  width: 100%;
+  background: #f4f6f6;
+}
+
+.heroSec > div {
+  padding: 40px;
+}

@@ -1,0 +1,60 @@
+.tableSec {
+  margin-top: 10px;
+}
+
+.table {
+  width: 100%;
+  background: #fff;
+  max-height: 540px;
+  height: 100%;
+  box-shadow: 0px 0px 15px #dbe7e5;
+  padding: 15px;
+}
+
+.table tr th {
+  border-bottom: 2px solid #f1f1f1;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.table tbody tr td {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.table tr {
+  text-align: center;
+}
+
+.clear {
+  color: #4690ff;
+}
+
+.open {
+  background: #ff6b00;
+  border-radius: 30px;
+  width: 138px;
+  height: 38px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.clear {
+  border-radius: 30px;
+  width: 138px;
+  height: 38px;
+  cursor: pointer;
+}
+
+.clear:hover {
+  background: #4690ff;
+  color: #fff;
+}
+
+.rightArrow {
+  filter: invert(1);
+}
+
+.table tbody tr td img {
+  cursor: pointer;
+}

@@ -1,0 +1,46 @@
+.reportSec {
+  display: flex;
+  margin: 50px 0;
+  gap: 15px;
+}
+
+.report {
+  width: 380px;
+  height: 125px;
+  background: #fff;
+  cursor: pointer;
+  box-shadow: 0px 0px 15px #dbe7e5;
+}
+
+.report p {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.report h4 {
+  color: #4690ff;
+  font-size: 30px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.report h4:hover {
+  color: #fff;
+}
+
+.report > div {
+  padding: 25px;
+}
+
+.report p h5 {
+  font-size: 25px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.report:hover {
+  background: #4690ff;
+  color: #fff;
+}

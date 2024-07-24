@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./side-bar.module.css";
 import logo from "../../images/logo.png";
 import dashboardIcon from "../../images/dashboard.png";
@@ -13,6 +13,19 @@ import headfoneIcon from "../../images/headfone.png";
 import logOutIcon from "../../images/logOut.png";
 
 const SideBar = () => {
+  const [dropdowns, setDropdowns] = useState({
+    assets: false,
+    users: false,
+    reports: false,
+  });
+
+  const toggleDropdown = (key) => {
+    setDropdowns((prevDropdowns) => ({
+      ...prevDropdowns,
+      [key]: !prevDropdowns[key],
+    }));
+  };
+
   return (
     <div className={styles.sidebar}>
       <div className={styles.mainContent}>
@@ -27,14 +40,35 @@ const SideBar = () => {
               </span>
               <h5>Dashboard</h5>
             </li>
-            <li className={styles.link}>
-              <span>
-                <img src={unionIcon} alt="Union" />
-              </span>
-              <h5>Assets</h5>
-              <span>
-                <img src={caretIcon} alt="Caret" />
-              </span>
+            <li
+              className={styles.link}
+              onClick={() => toggleDropdown("assets")}
+              style={{ flexDirection: "column", alignItems: "baseline" }}
+            >
+              <div className={styles.assets}>
+                <span>
+                  <img src={unionIcon} alt="Union" />
+                </span>
+                <h5>Assets</h5>
+                <span>
+                  <img src={caretIcon} alt="Caret" />
+                </span>
+              </div>
+              <div
+                className={`${styles.assetsLink} ${
+                  dropdowns.assets ? styles.open : ""
+                }`}
+              >
+                <ul>
+                  <li>All Assets</li>
+                  <li>Departments</li>
+                  <li>Movements</li>
+                  <li>Depreciation</li>
+                  <li>Check In</li>
+                  <li>Check Out</li>
+                  <li>Sell Online</li>
+                </ul>
+              </div>
             </li>
             <li className={styles.link}>
               <span>
@@ -54,23 +88,56 @@ const SideBar = () => {
               </span>
               <h5>Request</h5>
             </li>
-            <li className={styles.link}>
-              <span>
-                <img src={usersIcon} alt="Users" />
-              </span>
-              <h5>Users</h5>
-              <span>
-                <img src={caretIcon} alt="Caret" />
-              </span>
+            <li
+              className={styles.link}
+              onClick={() => toggleDropdown("users")}
+              style={{ flexDirection: "column", alignItems: "baseline" }}
+            >
+              <div className={styles.assets}>
+                <span>
+                  <img src={usersIcon} alt="Users" />
+                </span>
+                <h5>Users</h5>
+                <span>
+                  <img src={caretIcon} alt="Caret" />
+                </span>
+              </div>
+              <div
+                className={`${styles.assetsLink} ${
+                  dropdowns.users ? styles.open : ""
+                }`}
+              >
+                <ul>
+                  <li>All Users</li>
+                  <li>Calender</li>
+                  <li>User Manuals</li>
+                </ul>
+              </div>
             </li>
-            <li className={styles.link}>
-              <span>
-                <img src={reportsIcon} alt="Reports" />
-              </span>
-              <h5>Reports</h5>
-              <span>
-                <img src={caretIcon} alt="Caret" />
-              </span>
+            <li
+              className={styles.link}
+              onClick={() => toggleDropdown("reports")}
+              style={{ flexDirection: "column", alignItems: "baseline" }}
+            >
+              <div className={styles.assets}>
+                <span>
+                  <img src={reportsIcon} alt="Reports" />
+                </span>
+                <h5>Reports</h5>
+                <span>
+                  <img src={caretIcon} alt="Caret" />
+                </span>
+              </div>
+              <div
+                className={`${styles.assetsLink} ${
+                  dropdowns.reports ? styles.open : ""
+                }`}
+              >
+                <ul>
+                  <li>All Reports</li>
+                  <li>PM Checklist</li>
+                </ul>
+              </div>
             </li>
           </ul>
         </div>

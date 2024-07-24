@@ -26,8 +26,12 @@
   margin: 0;
 }
 
-.report h4:hover {
+.report:hover h4 {
   color: #fff;
+}
+
+.report:hover img {
+  filter: invert(1);
 }
 
 .report > div {

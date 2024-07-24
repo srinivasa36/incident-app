@@ -42,6 +42,18 @@
   cursor: pointer;
 }
 
+.supportSec:hover {
+  background: #fff;
+}
+
+.supportSec:hover h5 {
+  color: #000;
+}
+
+.supportSec:hover img {
+  filter: invert(1);
+}
+
 .supportSec h5 {
   color: #fff;
   font-weight: 700;
@@ -49,7 +61,7 @@
 }
 
 .supportSec img {
-  margin-left: 10px;
+  margin-left: 15px;
 }
 
 .contactSec {
@@ -59,4 +71,40 @@
   align-items: center;
   gap: 30px;
   margin-top: 80px;
+}
+
+.assets {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.assetsLink {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease-out;
+  margin-top: -20px;
+}
+
+.assetsLink.open {
+  max-height: 300px;
+  transition: max-height 0.5s ease-in;
+}
+
+.assetsLink ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border-left: 1px solid #fff;
+}
+
+.assetsLink ul li {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.assetsLink ul li:hover {
+  color: #4690ff;
 }
